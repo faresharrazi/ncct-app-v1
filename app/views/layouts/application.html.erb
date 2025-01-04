@@ -23,11 +23,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <%= render 'layouts/navbar' %>
-    <div class="container">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+  <body class="bg-light vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+      <div class="card shadow-lg p-4 w-100" style="max-width: 512px; height: 100%;">
+        <%= render 'layouts/navbar' %>
+        <div class="container mt-2">
+          <%= render 'layouts/messages' %>
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
